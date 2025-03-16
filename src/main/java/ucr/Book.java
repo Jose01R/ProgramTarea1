@@ -5,7 +5,7 @@ import abstracts.Product;
 public class Book extends Product {
     private String author;
 
-    public Book(String name, int price, String author) {
+    public Book(String name, String author, int price) {
         super(name, price);
         this.author = author;
     }
@@ -18,4 +18,8 @@ public class Book extends Product {
         return author;
     }
 
+    @Override
+    public String description() {
+        return "\nLibro: " + name + "\nAutor: " + author + "\nPrecio: " + price + "\n";
+    }
 }

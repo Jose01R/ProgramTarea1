@@ -6,10 +6,15 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        Book book = new Book("Padre Rico, Padre Pobre", 5000, "Robert Kiyosaki");
+        Book book = new Book("Padre Rico, Padre Pobre", "Robert Kiyosaki", 5000);
+
+        /*
         System.out.println(book.description());
         System.out.println("Autor: " + book.getAuthor());
         System.out.println("Precio: " + book.listPrice());
+         */
+
+        System.out.println(book.description());
 
         if (book.listPrice() > 2500) {
             System.out.println("Se le aplicó un descuento de 1000, nuevo precio: " + book.aplicarDescuento());
