@@ -1,9 +1,12 @@
 package ucr;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        Book book = new Book("Padre Rico, Padre Pobre", 5000, "Robert Kiyosaki");
+        System.out.println(book.description());
+        System.out.println("Autor: " + book.getAuthor());
+        System.out.println("Precio: " + book.listPrice());
+        System.out.println("Precio mínimo: " + book.lowestPrice());
     }
 }
