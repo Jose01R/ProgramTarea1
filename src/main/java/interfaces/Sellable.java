@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Sellable {
+public interface  Sellable {
     public String description();
 
     public int listPrice();

@@ -1,8 +1,9 @@
 package abstracts;
 
+import interfaces.Descuento;
 import interfaces.Sellable;
 
-public abstract class Product implements Sellable {
+public abstract class Product implements Sellable, Descuento {
     protected String name;
     protected int price;
 
@@ -15,11 +16,20 @@ public abstract class Product implements Sellable {
         return "Producto: " + name;
     }
 
+    public int aplicarDescuento(){
+
+        if(price>2500){
+            return price-1000;
+        }else
+            return price-250;
+
+    }
     public int lowestPrice() {
-        return price - 500;
+        return aplicarDescuento()-500;
     }
 
     public int listPrice() {
         return price;
     }
+
 }
